@@ -41,11 +41,16 @@ mkdir -p /system
 mkdir -p /cache /nsonsgs/mnt/gingerbread/cache
 mkdir -p /data /nsonsgs/mnt/gingerbread/data
 mkdir -p /efs /nsonsgs/mnt/gingerbread/efs
+mkdir -p /mnt/emmc /nsonsgs/mnt/gingerbread/emmc
+mkdir -p /datadata /nsonsgs/mnt/gingerbread/datadata
+mkdir -p /radio /nsonsgs/mnt/gingerbread/radio
 mount -o bind /nsonsgs/mnt/gingerbread/system /system
 mount -o bind /nsonsgs/mnt/gingerbread/cache /cache
 mount -o bind /nsonsgs/mnt/gingerbread/data /data
 mount -o bind /nsonsgs/mnt/gingerbread/efs /efs
-
+mount -o bind /nsonsgs/mnt/gingerbread/datadata /datadata
+#mount -o bind /nsonsgs/mnt/gingerbread/emmc /mnt/emmc
+mount -o bind /nsonsgs/mnt/gingerbread/radio /radio
 
 # copy port resources
 cp nsonsgs/resources/vold.fstab"$model_prefix" /system/etc/vold.fstab
